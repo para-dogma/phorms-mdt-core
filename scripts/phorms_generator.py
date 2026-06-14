@@ -1,5 +1,4 @@
-"""
-PhormS MDT Generator
+"""PhormS MDT Generator
 Core generator for Multidimensional Tokens (MDT) on TON blockchain.
 Implements 5-vector Merkle root system with ML-based anomaly detection.
 
