@@ -3,6 +3,15 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+[![Tests](https://github.com/para-dogma/phorms-mdt-core/actions/workflows/test.yml/badge.svg)](https://github.com/para-dogma/phorms-mdt-core/actions)
+
+[![Tact](https://img.shields.io/badge/Tact-v1.4+-purple.svg)](https://tact-lang.org/)
+
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
+
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 [![Tests](https://img.shields.io/badge/Tests-27%2B%20passing-green.svg)](https://github.com/para-dogma/phorms-mdt-core/actions)
 
 [![Tact](https://img.shields.io/badge/Tact-v1.4+-purple.svg)](https://tact-lang.org/)
