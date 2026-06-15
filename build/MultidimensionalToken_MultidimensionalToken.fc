@@ -1,0 +1,822 @@
+#pragma version =0.4.6;
+#pragma allow-post-modification;
+#pragma compute-asm-ltr;
+
+;; MultidimensionalToken_MultidimensionalToken.headers.fc
+;;
+;; Header files for MultidimensionalToken
+;; NOTE: declarations are sorted for optimal order
+;;
+
+;; __tact_context_get
+(int, slice, int, slice) __tact_context_get() inline;
+
+;; __tact_context_get_sender
+slice __tact_context_get_sender() inline;
+
+;; $DeployOk$_store
+builder $DeployOk$_store(builder build_0, (int) v) inline;
+
+;; $DeployOk$_store_cell
+cell $DeployOk$_store_cell((int) v, builder b) inline;
+
+;; $IdentityRoot$_store
+builder $IdentityRoot$_store(builder build_0, (int, slice, slice, int) v) inline;
+
+;; $IdentityRoot$_load
+(slice, ((int, slice, slice, int))) $IdentityRoot$_load(slice sc_0) inline;
+
+;; $StateRoot$_store
+builder $StateRoot$_store(builder build_0, (int, int, int, int) v) inline;
+
+;; $StateRoot$_load
+(slice, ((int, int, int, int))) $StateRoot$_load(slice sc_0) inline;
+
+;; $QualityRoot$_store
+builder $QualityRoot$_store(builder build_0, (int, int, int) v) inline;
+
+;; $QualityRoot$_load
+(slice, ((int, int, int))) $QualityRoot$_load(slice sc_0) inline;
+
+;; $LegalRoot$_store
+builder $LegalRoot$_store(builder build_0, (int, int, int) v) inline;
+
+;; $LegalRoot$_load
+(slice, ((int, int, int))) $LegalRoot$_load(slice sc_0) inline;
+
+;; $LineageRoot$_store
+builder $LineageRoot$_store(builder build_0, (int, int) v) inline;
+
+;; $LineageRoot$_load
+(slice, ((int, int))) $LineageRoot$_load(slice sc_0) inline;
+
+;; $MultidimensionalToken$_store
+builder $MultidimensionalToken$_store(builder build_0, (slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) v) inline;
+
+;; $MultidimensionalToken$_load
+(slice, ((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int))) $MultidimensionalToken$_load(slice sc_0) inline;
+
+;; $Context$_get_value
+_ $Context$_get_value((int, slice, int, slice) v) inline;
+
+;; $IdentityRoot$_to_external
+(int, slice, slice, int) $IdentityRoot$_to_external(((int, slice, slice, int)) v) inline;
+
+;; $StateRoot$_to_external
+(int, int, int, int) $StateRoot$_to_external(((int, int, int, int)) v) inline;
+
+;; $QualityRoot$_to_external
+(int, int, int) $QualityRoot$_to_external(((int, int, int)) v) inline;
+
+;; $LegalRoot$_to_external
+(int, int, int) $LegalRoot$_to_external(((int, int, int)) v) inline;
+
+;; $LineageRoot$_to_external
+(int, int) $LineageRoot$_to_external(((int, int)) v) inline;
+
+;; $MultidimensionalToken$init$_load
+(slice, ((int, slice, slice, int, int, int))) $MultidimensionalToken$init$_load(slice sc_0) inline;
+
+;; $IdentityRoot$_constructor_token_id_owner_minter_created_at
+((int, slice, slice, int)) $IdentityRoot$_constructor_token_id_owner_minter_created_at(int $token_id, slice $owner, slice $minter, int $created_at) inline;
+
+;; $StateRoot$_constructor_is_active_generation_parent_id_total_supply
+((int, int, int, int)) $StateRoot$_constructor_is_active_generation_parent_id_total_supply(int $is_active, int $generation, int $parent_id, int $total_supply) inline;
+
+;; $QualityRoot$_constructor_quality_score_audit_status_verification_count
+((int, int, int)) $QualityRoot$_constructor_quality_score_audit_status_verification_count(int $quality_score, int $audit_status, int $verification_count) inline;
+
+;; $LegalRoot$_constructor_legal_status_compliance_hash_jurisdiction_code
+((int, int, int)) $LegalRoot$_constructor_legal_status_compliance_hash_jurisdiction_code(int $legal_status, int $compliance_hash, int $jurisdiction_code) inline;
+
+;; $LineageRoot$_constructor_lineage_depth_split_count
+((int, int)) $LineageRoot$_constructor_lineage_depth_split_count(int $lineage_depth, int $split_count) inline;
+
+;; $MultidimensionalToken$_contract_init
+(slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $MultidimensionalToken$_contract_init(int $token_id, slice $owner, slice $minter, int $total_supply, int $generation, int $parent_id) impure inline;
+
+;; $MultidimensionalToken$_contract_load
+(slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $MultidimensionalToken$_contract_load() impure inline;
+
+;; $MultidimensionalToken$_contract_store
+() $MultidimensionalToken$_contract_store((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) v) impure inline;
+
+;; $MultidimensionalToken$_fun_getState
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), (int, int, int, int)) $MultidimensionalToken$_fun_getState((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref;
+
+;; $MultidimensionalToken$_fun_getIdentity
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), (int, slice, slice, int)) $MultidimensionalToken$_fun_getIdentity((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref;
+
+;; $MultidimensionalToken$_fun_getQuality
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), (int, int, int)) $MultidimensionalToken$_fun_getQuality((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref;
+
+;; $MultidimensionalToken$_fun_getLegal
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), (int, int, int)) $MultidimensionalToken$_fun_getLegal((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref;
+
+;; $MultidimensionalToken$_fun_getLineage
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), (int, int)) $MultidimensionalToken$_fun_getLineage((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref;
+
+;; $MultidimensionalToken$_fun_isStale
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), int) $MultidimensionalToken$_fun_isStale((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref;
+
+;; $MultidimensionalToken$_fun_getTimeSinceLastUpdate
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), int) $MultidimensionalToken$_fun_getTimeSinceLastUpdate((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref;
+
+;; $MultidimensionalToken$_fun_getTimeUntilStale
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), int) $MultidimensionalToken$_fun_getTimeUntilStale((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref;
+
+;; $MultidimensionalToken$_fun_isActive
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), int) $MultidimensionalToken$_fun_isActive((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref;
+
+;; $MultidimensionalToken$_fun_getGeneration
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), int) $MultidimensionalToken$_fun_getGeneration((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref;
+
+;; $MultidimensionalToken$_fun_getTotalSupply
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), int) $MultidimensionalToken$_fun_getTotalSupply((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref;
+
+;; $MessageParameters$_constructor_bounce_to_value_mode_body
+((int, cell, int, slice, int)) $MessageParameters$_constructor_bounce_to_value_mode_body(int $bounce, slice $to, int $value, int $mode, cell $body) inline;
+
+;; $MultidimensionalToken$_fun_notify
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), ()) $MultidimensionalToken$_fun_notify((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self, cell $body) impure inline;
+
+;; $MultidimensionalToken$_fun_owner
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), slice) $MultidimensionalToken$_fun_owner((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref;
+
+;; $SendParameters$_constructor_to_value_mode_body
+((int, cell, cell, cell, int, slice, int)) $SendParameters$_constructor_to_value_mode_body(slice $to, int $value, int $mode, cell $body) inline;
+
+;; $DeployOk$_constructor_queryId
+((int)) $DeployOk$_constructor_queryId(int $queryId) inline;
+
+
+;; MultidimensionalToken_MultidimensionalToken.stdlib.fc
+global (int, slice, int, slice) __tact_context;
+global slice __tact_context_sender;
+global cell __tact_child_contract_codes;
+global int __tact_randomized;
+
+(int, slice, int, slice) __tact_context_get() inline {
+    return __tact_context;
+}
+
+slice __tact_context_get_sender() inline {
+    return __tact_context_sender;
+}
+
+int $global_now() impure asm """
+    NOW
+""";
+
+builder $global_beginCell() impure asm """
+    NEWC
+""";
+
+int $global_myBalance() impure asm """
+    BALANCE FIRST
+""";
+
+() $global_nativeReserve(int $amount, int $mode) impure asm """
+    RAWRESERVE
+""";
+
+() $global_message((int, cell, int, slice, int) $params) impure asm """
+    NEWC
+    b{01} STSLICECONST  // store tag = $0 and ihr_disabled = true
+    1 STI               // store `bounce`
+    b{000} STSLICECONST // store bounced = false and src = addr_none
+    STSLICE             // store `to`
+    SWAP
+    STGRAMS             // store `value`
+    106 PUSHINT         // 1 + 4 + 4 + 64 + 32 + 1
+    STZEROES
+    // → Stack state
+    // s0: Builder
+    // s1: `body`
+    // s2: `mode`
+    STDICT
+    ENDC
+    SWAP
+    SENDRAWMSG
+""";
+
+() $global_send((int, cell, cell, cell, int, slice, int) $params) impure asm """
+    NEWC
+    b{01} STSLICECONST  // store tag = $0 and ihr_disabled = true
+    1 STI               // store `bounce`
+    b{000} STSLICECONST // store bounced = false and src = addr_none
+    STSLICE             // store `to`
+    SWAP
+    STGRAMS             // store `value`
+    105 PUSHINT         // 1 + 4 + 4 + 64 + 32
+    STZEROES            // store currency_collection, ihr_fee, fwd_fee, created_lt and created_at
+    // → Stack state
+    // s0: Builder
+    // s1: `data`
+    // s2: `code`
+    // s3: `body`
+    // s4: `mode`
+
+    // Group 2: Placing the Builder after code and data, then checking those for nullability
+    s2 XCHG0
+    DUP2
+    ISNULL
+    SWAP
+    ISNULL
+    AND
+    // → Stack state
+    // s0: -1 (true) if `data` and `code` are both null, 0 (false) otherwise
+    // s1: `code`
+    // s2: `data`
+    // s3: Builder
+    // s4: `body`
+    // s5: `mode`
+
+    // Group 3: Left branch of the IFELSE, executed if s0 is -1 (true)
+    <{
+        DROP2 // drop `data` and `code`, since either of those is null
+        b{0} STSLICECONST
+    }> PUSHCONT
+
+    // Group 3: Right branch of the IFELSE, executed if s0 is 0 (false)
+    <{
+        // _ split_depth:(Maybe (## 5))
+        //   special:(Maybe TickTock)
+        //   code:(Maybe ^Cell)
+        //   data:(Maybe ^Cell)
+        //   library:(Maybe ^Cell)
+        // = StateInit;
+        ROT                // place message Builder on top
+        b{10} STSLICECONST // store Maybe = true, Either = false
+        // Start composing inlined StateInit
+        b{00} STSLICECONST // store split_depth and special first
+        STDICT             // store code
+        STDICT             // store data
+        b{0} STSLICECONST  // store library
+    }> PUSHCONT
+
+    // Group 3: IFELSE that does the branching shown above
+    IFELSE
+    // → Stack state
+    // s0: Builder
+    // s1: null or StateInit
+    // s2: `body`
+    // s3: `mode`
+
+    // Group 4: Finalizing the message
+    STDICT // store `body` as ref with an extra Maybe bit, since `body` might be null
+    ENDC
+    // → Stack state
+    // s0: Cell
+    // s1: `mode`
+
+    // Group 5: Sending the message, with `mode` on top
+    SWAP
+    SENDRAWMSG // https://github.com/tact-lang/tact/issues/1558
+""";
+
+cell $Builder$_fun_endCell(builder $self) impure asm """
+    ENDC
+""";
+
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), ()) $MultidimensionalToken$_fun_notify((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self, cell $body) impure inline {
+    var (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update)) = $self;
+    slice $to = __tact_context_get_sender();
+    int $bounce = false;
+    if (false) {
+        int $balance = $global_myBalance();
+        int $balanceBeforeMessage = ($balance - $Context$_get_value(__tact_context_get()));
+        if (($balanceBeforeMessage < 0)) {
+            $global_nativeReserve(0, 0);
+            $global_message($MessageParameters$_constructor_bounce_to_value_mode_body($bounce, $to, 0, 130, $body));
+            return (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update), ());
+        }
+    }
+    $global_message($MessageParameters$_constructor_bounce_to_value_mode_body($bounce, $to, 0, 66, $body));
+    return (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update), ());
+}
+
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), slice) $MultidimensionalToken$_fun_owner((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref {
+    var (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update)) = $self;
+    var $fresh$ret_12 = $self'owner;
+    return (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update), $fresh$ret_12);
+}
+
+;; MultidimensionalToken_MultidimensionalToken.storage.fc
+;;
+;; Type: Context
+;; TLB: _ bounceable:bool sender:address value:int257 raw:^slice = Context
+;;
+
+_ $Context$_get_value((int, slice, int, slice) v) inline {
+    var (v'bounceable, v'sender, v'value, v'raw) = v;
+    return v'value;
+}
+
+;;
+;; Type: SendParameters
+;; TLB: _ mode:int257 body:Maybe ^cell code:Maybe ^cell data:Maybe ^cell value:int257 to:address bounce:bool = SendParameters
+;;
+
+((int, cell, cell, cell, int, slice, int)) $SendParameters$_constructor_to_value_mode_body(slice $to, int $value, int $mode, cell $body) inline {
+    return ($mode, $body, null(), null(), $value, $to, true);
+}
+
+;;
+;; Type: MessageParameters
+;; TLB: _ mode:int257 body:Maybe ^cell value:int257 to:address bounce:bool = MessageParameters
+;;
+
+((int, cell, int, slice, int)) $MessageParameters$_constructor_bounce_to_value_mode_body(int $bounce, slice $to, int $value, int $mode, cell $body) inline {
+    return ($mode, $body, $value, $to, $bounce);
+}
+
+;;
+;; Type: DeployOk
+;; Header: 0xaff90f57
+;; TLB: deploy_ok#aff90f57 queryId:uint64 = DeployOk
+;;
+
+builder $DeployOk$_store(builder build_0, (int) v) inline {
+    var (v'queryId) = v;
+    build_0 = store_uint(build_0, 2952335191, 32);
+    build_0 = build_0.store_uint(v'queryId, 64);
+    return build_0;
+}
+
+cell $DeployOk$_store_cell((int) v, builder b) inline {
+    return $DeployOk$_store(b, v).end_cell();
+}
+
+((int)) $DeployOk$_constructor_queryId(int $queryId) inline {
+    return ($queryId);
+}
+
+;;
+;; Type: IdentityRoot
+;; TLB: _ token_id:int257 owner:address minter:address created_at:int257 = IdentityRoot
+;;
+
+builder $IdentityRoot$_store(builder build_0, (int, slice, slice, int) v) inline {
+    var (v'token_id, v'owner, v'minter, v'created_at) = v;
+    build_0 = build_0.store_int(v'token_id, 257);
+    build_0 = build_0.store_slice(v'owner);
+    build_0 = build_0.store_slice(v'minter);
+    var build_1 = begin_cell();
+    build_1 = build_1.store_int(v'created_at, 257);
+    build_0 = store_builder_ref(build_0, build_1);
+    return build_0;
+}
+
+(slice, ((int, slice, slice, int))) $IdentityRoot$_load(slice sc_0) inline {
+    var v'token_id = sc_0~load_int(257);
+    var v'owner = sc_0~load_msg_addr();
+    var v'minter = sc_0~load_msg_addr();
+    slice sc_1 = sc_0~load_ref().begin_parse();
+    var v'created_at = sc_1~load_int(257);
+    return (sc_0, (v'token_id, v'owner, v'minter, v'created_at));
+}
+
+(int, slice, slice, int) $IdentityRoot$_to_external(((int, slice, slice, int)) v) inline {
+    var (v'token_id, v'owner, v'minter, v'created_at) = v; 
+    return (v'token_id, v'owner, v'minter, v'created_at);
+}
+
+((int, slice, slice, int)) $IdentityRoot$_constructor_token_id_owner_minter_created_at(int $token_id, slice $owner, slice $minter, int $created_at) inline {
+    return ($token_id, $owner, $minter, $created_at);
+}
+
+;;
+;; Type: StateRoot
+;; TLB: _ is_active:bool generation:int257 parent_id:int257 total_supply:int257 = StateRoot
+;;
+
+builder $StateRoot$_store(builder build_0, (int, int, int, int) v) inline {
+    var (v'is_active, v'generation, v'parent_id, v'total_supply) = v;
+    build_0 = build_0.store_int(v'is_active, 1);
+    build_0 = build_0.store_int(v'generation, 257);
+    build_0 = build_0.store_int(v'parent_id, 257);
+    build_0 = build_0.store_int(v'total_supply, 257);
+    return build_0;
+}
+
+(slice, ((int, int, int, int))) $StateRoot$_load(slice sc_0) inline {
+    var v'is_active = sc_0~load_int(1);
+    var v'generation = sc_0~load_int(257);
+    var v'parent_id = sc_0~load_int(257);
+    var v'total_supply = sc_0~load_int(257);
+    return (sc_0, (v'is_active, v'generation, v'parent_id, v'total_supply));
+}
+
+(int, int, int, int) $StateRoot$_to_external(((int, int, int, int)) v) inline {
+    var (v'is_active, v'generation, v'parent_id, v'total_supply) = v; 
+    return (v'is_active, v'generation, v'parent_id, v'total_supply);
+}
+
+((int, int, int, int)) $StateRoot$_constructor_is_active_generation_parent_id_total_supply(int $is_active, int $generation, int $parent_id, int $total_supply) inline {
+    return ($is_active, $generation, $parent_id, $total_supply);
+}
+
+;;
+;; Type: QualityRoot
+;; TLB: _ quality_score:int257 audit_status:int257 verification_count:int257 = QualityRoot
+;;
+
+builder $QualityRoot$_store(builder build_0, (int, int, int) v) inline {
+    var (v'quality_score, v'audit_status, v'verification_count) = v;
+    build_0 = build_0.store_int(v'quality_score, 257);
+    build_0 = build_0.store_int(v'audit_status, 257);
+    build_0 = build_0.store_int(v'verification_count, 257);
+    return build_0;
+}
+
+(slice, ((int, int, int))) $QualityRoot$_load(slice sc_0) inline {
+    var v'quality_score = sc_0~load_int(257);
+    var v'audit_status = sc_0~load_int(257);
+    var v'verification_count = sc_0~load_int(257);
+    return (sc_0, (v'quality_score, v'audit_status, v'verification_count));
+}
+
+(int, int, int) $QualityRoot$_to_external(((int, int, int)) v) inline {
+    var (v'quality_score, v'audit_status, v'verification_count) = v; 
+    return (v'quality_score, v'audit_status, v'verification_count);
+}
+
+((int, int, int)) $QualityRoot$_constructor_quality_score_audit_status_verification_count(int $quality_score, int $audit_status, int $verification_count) inline {
+    return ($quality_score, $audit_status, $verification_count);
+}
+
+;;
+;; Type: LegalRoot
+;; TLB: _ legal_status:int257 compliance_hash:int257 jurisdiction_code:int257 = LegalRoot
+;;
+
+builder $LegalRoot$_store(builder build_0, (int, int, int) v) inline {
+    var (v'legal_status, v'compliance_hash, v'jurisdiction_code) = v;
+    build_0 = build_0.store_int(v'legal_status, 257);
+    build_0 = build_0.store_int(v'compliance_hash, 257);
+    build_0 = build_0.store_int(v'jurisdiction_code, 257);
+    return build_0;
+}
+
+(slice, ((int, int, int))) $LegalRoot$_load(slice sc_0) inline {
+    var v'legal_status = sc_0~load_int(257);
+    var v'compliance_hash = sc_0~load_int(257);
+    var v'jurisdiction_code = sc_0~load_int(257);
+    return (sc_0, (v'legal_status, v'compliance_hash, v'jurisdiction_code));
+}
+
+(int, int, int) $LegalRoot$_to_external(((int, int, int)) v) inline {
+    var (v'legal_status, v'compliance_hash, v'jurisdiction_code) = v; 
+    return (v'legal_status, v'compliance_hash, v'jurisdiction_code);
+}
+
+((int, int, int)) $LegalRoot$_constructor_legal_status_compliance_hash_jurisdiction_code(int $legal_status, int $compliance_hash, int $jurisdiction_code) inline {
+    return ($legal_status, $compliance_hash, $jurisdiction_code);
+}
+
+;;
+;; Type: LineageRoot
+;; TLB: _ lineage_depth:int257 split_count:int257 = LineageRoot
+;;
+
+builder $LineageRoot$_store(builder build_0, (int, int) v) inline {
+    var (v'lineage_depth, v'split_count) = v;
+    build_0 = build_0.store_int(v'lineage_depth, 257);
+    build_0 = build_0.store_int(v'split_count, 257);
+    return build_0;
+}
+
+(slice, ((int, int))) $LineageRoot$_load(slice sc_0) inline {
+    var v'lineage_depth = sc_0~load_int(257);
+    var v'split_count = sc_0~load_int(257);
+    return (sc_0, (v'lineage_depth, v'split_count));
+}
+
+(int, int) $LineageRoot$_to_external(((int, int)) v) inline {
+    var (v'lineage_depth, v'split_count) = v; 
+    return (v'lineage_depth, v'split_count);
+}
+
+((int, int)) $LineageRoot$_constructor_lineage_depth_split_count(int $lineage_depth, int $split_count) inline {
+    return ($lineage_depth, $split_count);
+}
+
+;;
+;; Type: MultidimensionalToken
+;; TLB: _ owner:address identity:IdentityRoot{token_id:int257,owner:address,minter:address,created_at:int257} state:StateRoot{is_active:bool,generation:int257,parent_id:int257,total_supply:int257} quality:QualityRoot{quality_score:int257,audit_status:int257,verification_count:int257} legal:LegalRoot{legal_status:int257,compliance_hash:int257,jurisdiction_code:int257} lineage:LineageRoot{lineage_depth:int257,split_count:int257} last_update:int257 = MultidimensionalToken
+;;
+
+builder $MultidimensionalToken$_store(builder build_0, (slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) v) inline {
+    var (v'owner, (v'identity'token_id, v'identity'owner, v'identity'minter, v'identity'created_at), (v'state'is_active, v'state'generation, v'state'parent_id, v'state'total_supply), (v'quality'quality_score, v'quality'audit_status, v'quality'verification_count), (v'legal'legal_status, v'legal'compliance_hash, v'legal'jurisdiction_code), (v'lineage'lineage_depth, v'lineage'split_count), v'last_update) = v;
+    build_0 = build_0.store_slice(v'owner);
+    var build_1 = begin_cell();
+    build_1 = $IdentityRoot$_store(build_1, (v'identity'token_id, v'identity'owner, v'identity'minter, v'identity'created_at));
+    var build_2 = begin_cell();
+    build_2 = $StateRoot$_store(build_2, (v'state'is_active, v'state'generation, v'state'parent_id, v'state'total_supply));
+    var build_3 = begin_cell();
+    build_3 = $QualityRoot$_store(build_3, (v'quality'quality_score, v'quality'audit_status, v'quality'verification_count));
+    var build_4 = begin_cell();
+    build_4 = $LegalRoot$_store(build_4, (v'legal'legal_status, v'legal'compliance_hash, v'legal'jurisdiction_code));
+    var build_5 = begin_cell();
+    build_5 = $LineageRoot$_store(build_5, (v'lineage'lineage_depth, v'lineage'split_count));
+    build_5 = build_5.store_int(v'last_update, 257);
+    build_4 = store_builder_ref(build_4, build_5);
+    build_3 = store_builder_ref(build_3, build_4);
+    build_2 = store_builder_ref(build_2, build_3);
+    build_1 = store_builder_ref(build_1, build_2);
+    build_0 = store_builder_ref(build_0, build_1);
+    return build_0;
+}
+
+(slice, ((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int))) $MultidimensionalToken$_load(slice sc_0) inline {
+    var v'owner = sc_0~load_msg_addr();
+    slice sc_1 = sc_0~load_ref().begin_parse();
+    var v'identity = sc_1~$IdentityRoot$_load();
+    slice sc_2 = sc_1~load_ref().begin_parse();
+    var v'state = sc_2~$StateRoot$_load();
+    slice sc_3 = sc_2~load_ref().begin_parse();
+    var v'quality = sc_3~$QualityRoot$_load();
+    slice sc_4 = sc_3~load_ref().begin_parse();
+    var v'legal = sc_4~$LegalRoot$_load();
+    slice sc_5 = sc_4~load_ref().begin_parse();
+    var v'lineage = sc_5~$LineageRoot$_load();
+    var v'last_update = sc_5~load_int(257);
+    return (sc_0, (v'owner, v'identity, v'state, v'quality, v'legal, v'lineage, v'last_update));
+}
+
+(slice, ((int, slice, slice, int, int, int))) $MultidimensionalToken$init$_load(slice sc_0) inline {
+    var v'token_id = sc_0~load_int(257);
+    var v'owner = sc_0~load_msg_addr();
+    var v'minter = sc_0~load_msg_addr();
+    slice sc_1 = sc_0~load_ref().begin_parse();
+    var v'total_supply = sc_1~load_int(257);
+    var v'generation = sc_1~load_int(257);
+    var v'parent_id = sc_1~load_int(257);
+    return (sc_0, (v'token_id, v'owner, v'minter, v'total_supply, v'generation, v'parent_id));
+}
+
+(slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $MultidimensionalToken$_contract_load() impure inline {
+    slice $sc = get_data().begin_parse();
+    int $loaded = $sc~load_int(1);
+    if ($loaded) {
+        return $sc~$MultidimensionalToken$_load();
+    }
+    else {
+        (int $token_id, slice $owner, slice $minter, int $total_supply, int $generation, int $parent_id) = $sc~$MultidimensionalToken$init$_load();
+        $sc.end_parse();
+        return $MultidimensionalToken$_contract_init($token_id, $owner, $minter, $total_supply, $generation, $parent_id);
+    }
+}
+
+() $MultidimensionalToken$_contract_store((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) v) impure inline {
+    builder b = begin_cell();
+    b = b.store_int(true, 1);
+    b = $MultidimensionalToken$_store(b, v);
+    set_data(b.end_cell());
+}
+
+;;
+;; Contract MultidimensionalToken functions
+;;
+
+(slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $MultidimensionalToken$_contract_init(int $token_id, slice $owner, slice $minter, int $total_supply, int $generation, int $parent_id) impure inline {
+    var (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update)) = (null(), null(), null(), null(), null(), null(), null());
+    int $now_ts = $global_now();
+    ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at) = $IdentityRoot$_constructor_token_id_owner_minter_created_at($token_id, $owner, $minter, $now_ts);
+    ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply) = $StateRoot$_constructor_is_active_generation_parent_id_total_supply(true, $generation, $parent_id, $total_supply);
+    ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count) = $QualityRoot$_constructor_quality_score_audit_status_verification_count(100, 0, 0);
+    ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code) = $LegalRoot$_constructor_legal_status_compliance_hash_jurisdiction_code(0, 0, 0);
+    ($self'lineage'lineage_depth, $self'lineage'split_count) = $LineageRoot$_constructor_lineage_depth_split_count($generation, 0);
+    $self'last_update = $now_ts;
+    $self'owner = $owner;
+    return ($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update);
+}
+
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), (int, int, int, int)) $MultidimensionalToken$_fun_getState((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref {
+    var (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update)) = $self;
+    var $fresh$ret_0 = ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply);
+    return (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update), $fresh$ret_0);
+}
+
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), (int, slice, slice, int)) $MultidimensionalToken$_fun_getIdentity((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref {
+    var (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update)) = $self;
+    var $fresh$ret_1 = ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at);
+    return (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update), $fresh$ret_1);
+}
+
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), (int, int, int)) $MultidimensionalToken$_fun_getQuality((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref {
+    var (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update)) = $self;
+    var $fresh$ret_2 = ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count);
+    return (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update), $fresh$ret_2);
+}
+
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), (int, int, int)) $MultidimensionalToken$_fun_getLegal((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref {
+    var (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update)) = $self;
+    var $fresh$ret_3 = ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code);
+    return (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update), $fresh$ret_3);
+}
+
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), (int, int)) $MultidimensionalToken$_fun_getLineage((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref {
+    var (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update)) = $self;
+    var $fresh$ret_4 = ($self'lineage'lineage_depth, $self'lineage'split_count);
+    return (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update), $fresh$ret_4);
+}
+
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), int) $MultidimensionalToken$_fun_isStale((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref {
+    var (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update)) = $self;
+    var $fresh$ret_5 = (($global_now() - $self'last_update) >= 2592000);
+    return (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update), $fresh$ret_5);
+}
+
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), int) $MultidimensionalToken$_fun_getTimeSinceLastUpdate((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref {
+    var (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update)) = $self;
+    var $fresh$ret_6 = ($global_now() - $self'last_update);
+    return (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update), $fresh$ret_6);
+}
+
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), int) $MultidimensionalToken$_fun_getTimeUntilStale((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref {
+    var (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update)) = $self;
+    int $elapsed = ($global_now() - $self'last_update);
+    if (($elapsed >= 2592000)) {
+        var $fresh$ret_7 = 0;
+        return (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update), $fresh$ret_7);
+    }
+    var $fresh$ret_8 = (2592000 - $elapsed);
+    return (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update), $fresh$ret_8);
+}
+
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), int) $MultidimensionalToken$_fun_isActive((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref {
+    var (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update)) = $self;
+    var $fresh$ret_9 = $self'state'is_active;
+    return (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update), $fresh$ret_9);
+}
+
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), int) $MultidimensionalToken$_fun_getGeneration((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref {
+    var (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update)) = $self;
+    var $fresh$ret_10 = $self'state'generation;
+    return (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update), $fresh$ret_10);
+}
+
+((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int), int) $MultidimensionalToken$_fun_getTotalSupply((slice, (int, slice, slice, int), (int, int, int, int), (int, int, int), (int, int, int), (int, int), int) $self) impure inline_ref {
+    var (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update)) = $self;
+    var $fresh$ret_11 = $self'state'total_supply;
+    return (($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update), $fresh$ret_11);
+}
+
+;;
+;; Get methods of a Contract MultidimensionalToken
+;;
+
+_ %getState() method_id(124033) {
+    var self = $MultidimensionalToken$_contract_load();
+    var res = self~$MultidimensionalToken$_fun_getState();
+    return $StateRoot$_to_external(res);
+}
+
+_ %getIdentity() method_id(116852) {
+    var self = $MultidimensionalToken$_contract_load();
+    var res = self~$MultidimensionalToken$_fun_getIdentity();
+    return $IdentityRoot$_to_external(res);
+}
+
+_ %getQuality() method_id(112826) {
+    var self = $MultidimensionalToken$_contract_load();
+    var res = self~$MultidimensionalToken$_fun_getQuality();
+    return $QualityRoot$_to_external(res);
+}
+
+_ %getLegal() method_id(79678) {
+    var self = $MultidimensionalToken$_contract_load();
+    var res = self~$MultidimensionalToken$_fun_getLegal();
+    return $LegalRoot$_to_external(res);
+}
+
+_ %getLineage() method_id(118302) {
+    var self = $MultidimensionalToken$_contract_load();
+    var res = self~$MultidimensionalToken$_fun_getLineage();
+    return $LineageRoot$_to_external(res);
+}
+
+_ %isStale() method_id(114385) {
+    var self = $MultidimensionalToken$_contract_load();
+    var res = self~$MultidimensionalToken$_fun_isStale();
+    return res;
+}
+
+_ %getTimeSinceLastUpdate() method_id(117078) {
+    var self = $MultidimensionalToken$_contract_load();
+    var res = self~$MultidimensionalToken$_fun_getTimeSinceLastUpdate();
+    return res;
+}
+
+_ %getTimeUntilStale() method_id(77818) {
+    var self = $MultidimensionalToken$_contract_load();
+    var res = self~$MultidimensionalToken$_fun_getTimeUntilStale();
+    return res;
+}
+
+_ %isActive() method_id(82798) {
+    var self = $MultidimensionalToken$_contract_load();
+    var res = self~$MultidimensionalToken$_fun_isActive();
+    return res;
+}
+
+_ %getGeneration() method_id(111722) {
+    var self = $MultidimensionalToken$_contract_load();
+    var res = self~$MultidimensionalToken$_fun_getGeneration();
+    return res;
+}
+
+_ %getTotalSupply() method_id(98914) {
+    var self = $MultidimensionalToken$_contract_load();
+    var res = self~$MultidimensionalToken$_fun_getTotalSupply();
+    return res;
+}
+
+_ %owner() method_id(83229) {
+    var self = $MultidimensionalToken$_contract_load();
+    var res = self~$MultidimensionalToken$_fun_owner();
+    return res;
+}
+
+;;
+;; Routing of a Contract MultidimensionalToken
+;;
+
+;; message opcode reader utility: only binary receivers
+;; Returns 32 bit message opcode, otherwise throws the "Invalid incoming message" exit code
+(slice, int) ~load_opcode_internal(slice s) asm( -> 1 0) "32 LDUQ 130 THROWIFNOT";
+
+() recv_internal(int msg_value, cell in_msg_cell, slice in_msg) impure {
+    
+    ;; Context
+    var cs = in_msg_cell.begin_parse();
+    cs~skip_bits(2);
+    var msg_bounceable = cs~load_int(1);
+    var msg_bounced = cs~load_int(1);
+    slice msg_sender_addr = cs~load_msg_addr();
+    __tact_context = (msg_bounceable, msg_sender_addr, msg_value, cs);
+    __tact_context_sender = msg_sender_addr;
+    
+    ;; Load contract data
+    var ($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update) = $MultidimensionalToken$_contract_load();
+    
+    ;; Handle bounced messages
+    if (msg_bounced) { return (); }
+    var op = in_msg~load_opcode_internal();
+    ;; Receive SplitMsg message
+    if (op == 2299018334) {
+        var $msg'amount1 = in_msg~load_int(257);
+        var $msg'amount2 = in_msg~load_int(257);
+        throw_unless(55834, ( equal_slices_bits(__tact_context_get_sender(), $self'owner) ));
+        throw_unless(33376, $self'state'is_active);
+        throw_unless(45438, ( (($msg'amount1 >= 1)) ? (($msg'amount2 >= 1)) : (false) ));
+        throw_unless(13800, (($msg'amount1 + $msg'amount2) == $self'state'total_supply));
+        int $elapsed = ($global_now() - $self'last_update);
+        throw_unless(44380, ($elapsed < 2592000));
+        $self'state'is_active = false;
+        $self'lineage'split_count = ($self'lineage'split_count + 1);
+        $self'last_update = $global_now();
+        $global_send($SendParameters$_constructor_to_value_mode_body($self'owner, 10000000, 1, $Builder$_fun_endCell(store_int(store_int(store_int(store_int(store_uint($global_beginCell(), 1, 32), $self'identity'token_id, 64), $msg'amount1, 64), $msg'amount2, 64), ($self'state'generation + 1), 32))));
+        $MultidimensionalToken$_contract_store(($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update));
+        return ();
+    }
+    
+    ;; Receive UpdateQualityMsg message
+    if (op == 3272362233) {
+        var $msg'quality_score = in_msg~load_int(257);
+        var $msg'audit_status = in_msg~load_int(257);
+        throw_unless(49469, ( equal_slices_bits(__tact_context_get_sender(), $self'owner) ));
+        throw_unless(18760, ( (($msg'quality_score >= 0)) ? (($msg'quality_score <= 100)) : (false) ));
+        $self'quality'quality_score = $msg'quality_score;
+        $self'quality'audit_status = $msg'audit_status;
+        $self'quality'verification_count = ($self'quality'verification_count + 1);
+        $self'last_update = $global_now();
+        $MultidimensionalToken$_contract_store(($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update));
+        return ();
+    }
+    
+    ;; Receive UpdateLegalMsg message
+    if (op == 1963855621) {
+        var $msg'legal_status = in_msg~load_int(257);
+        var $msg'compliance_hash = in_msg~load_int(257);
+        throw_unless(49469, ( equal_slices_bits(__tact_context_get_sender(), $self'owner) ));
+        $self'legal'legal_status = $msg'legal_status;
+        $self'legal'compliance_hash = $msg'compliance_hash;
+        $self'last_update = $global_now();
+        $MultidimensionalToken$_contract_store(($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update));
+        return ();
+    }
+    
+    ;; Receive Deploy message
+    if (op == 0x946a98b6) {
+        var $deploy'queryId = in_msg~load_uint(64);
+        ($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update)~$MultidimensionalToken$_fun_notify($DeployOk$_store_cell($DeployOk$_constructor_queryId($deploy'queryId), begin_cell()));
+        $MultidimensionalToken$_contract_store(($self'owner, ($self'identity'token_id, $self'identity'owner, $self'identity'minter, $self'identity'created_at), ($self'state'is_active, $self'state'generation, $self'state'parent_id, $self'state'total_supply), ($self'quality'quality_score, $self'quality'audit_status, $self'quality'verification_count), ($self'legal'legal_status, $self'legal'compliance_hash, $self'legal'jurisdiction_code), ($self'lineage'lineage_depth, $self'lineage'split_count), $self'last_update));
+        return ();
+    }
+    
+    ;; Throw if not handled
+    throw(130);
+}

@@ -1,0 +1,9 @@
+{
+  "projects": [
+    {
+      "name": "MultidimensionalToken",
+      "path": "./contracts/MultidimensionalToken.tact",
+      "output": "./build"
+    }
+  ]
+}

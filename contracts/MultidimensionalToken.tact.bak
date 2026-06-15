@@ -65,7 +65,6 @@ struct LineageRoot {
 //
 
 contract MultidimensionalToken with Deployable, Ownable {
-    owner: Address;
     
     // Core Data Vectors
     identity: IdentityRoot;
@@ -177,7 +176,7 @@ contract MultidimensionalToken with Deployable, Ownable {
         send(SendParameters{
             to: self.owner,
             value: ton("0.01"),
-            mode: 1,
+            mode: SendMode.PAY_GAS_SEPARATELY,
             body: beginCell()
                 .storeUint(self.OP_SPLIT_EVENT, 32)
                 .storeInt(self.identity.token_id, 64)

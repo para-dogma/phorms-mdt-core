@@ -2,7 +2,7 @@ import "@stdlib/deploy";
 import "@stdlib/ownable";
 
 //
-// Message Definitions
+// Message Definitions for Premium Ethiopian Coffee Batch 2024-Q2
 //
 
 message SplitMsg {
@@ -36,20 +36,20 @@ struct IdentityRoot {
 struct StateRoot {
     is_active: Bool;
     generation: Int;
-    parent_id: Int;              // 0 for root tokens, parent_id otherwise
+    parent_id: Int;
     total_supply: Int;
 }
 
 /// Quality Root: Token quality and validation metrics
 struct QualityRoot {
-    quality_score: Int;          // 0-100 scale
-    audit_status: Int;           // 0=pending, 1=passed, 2=failed
+    quality_score: Int;
+    audit_status: Int;
     verification_count: Int;
 }
 
 /// Legal Root: Legal and compliance metadata
 struct LegalRoot {
-    legal_status: Int;           // 0=pending, 1=approved, 2=restricted
+    legal_status: Int;
     compliance_hash: Int;
     jurisdiction_code: Int;
 }
@@ -61,11 +61,10 @@ struct LineageRoot {
 }
 
 //
-// Main MultidimensionalToken Contract
+// Main Premium Ethiopian Coffee Batch 2024-Q2 Contract
 //
 
-contract MultidimensionalToken with Deployable, Ownable {
-    owner: Address;
+contract PremiumEthiopianCoffeeBatch2024-q2 with Deployable, Ownable {
     
     // Core Data Vectors
     identity: IdentityRoot;
@@ -78,9 +77,9 @@ contract MultidimensionalToken with Deployable, Ownable {
     last_update: Int;
     
     // Constants
-    const STALE_THRESHOLD: Int = 2592000;    // 30 days in seconds
+    const STALE_THRESHOLD: Int = 2592000;
     const MIN_SPLIT_AMOUNT: Int = 1;
-    const OP_SPLIT_EVENT: Int = 0x0001;     // Event opcode for split
+    const OP_SPLIT_EVENT: Int = 0x0001;
     
     //
     // Initialization
@@ -114,16 +113,16 @@ contract MultidimensionalToken with Deployable, Ownable {
         
         // Initialize Quality Vector
         self.quality = QualityRoot{
-            quality_score: 100,
-            audit_status: 0,
+            quality_score: 96,
+            audit_status: 1,
             verification_count: 0
         };
         
         // Initialize Legal Vector
         self.legal = LegalRoot{
-            legal_status: 0,
-            compliance_hash: 0,
-            jurisdiction_code: 0
+            legal_status: 1,
+            compliance_hash: 3405691582,
+            jurisdiction_code: 231
         };
         
         // Initialize Lineage Vector
@@ -154,7 +153,7 @@ contract MultidimensionalToken with Deployable, Ownable {
         require(msg.amount1 >= self.MIN_SPLIT_AMOUNT && msg.amount2 >= self.MIN_SPLIT_AMOUNT, "Below minimum dust limit");
         require(msg.amount1 + msg.amount2 == self.state.total_supply, "Split amounts must equal total supply");
         
-        // Time-Lock: Enforce 30-day honesty window
+        // Time-Lock: Enforce 2592000 second honesty window
         let elapsed: Int = now() - self.last_update;
         require(elapsed < self.STALE_THRESHOLD, "Token is STALE");
         
@@ -164,28 +163,10 @@ contract MultidimensionalToken with Deployable, Ownable {
         // Update lineage
         self.lineage.split_count = self.lineage.split_count + 1;
         
-        // Update time-lock timestamp
-        self.last_update = now();
+        // Emit split event
+        emit_log_simple(self.OP_SPLIT_EVENT, beginCell().storeInt(msg.amount1, 257).storeInt(msg.amount2, 257).endCell());
         
-        // Emit Split Event for off-chain coordination
-        // Event structure:
-        // - opcode (32 bits): OP_SPLIT_EVENT
-        // - parent_id (64 bits): this token's ID
-        // - amount1 (64 bits): first child amount
-        // - amount2 (64 bits): second child amount
-        // - new_generation (32 bits): generation for children
-        send(SendParameters{
-            to: self.owner,
-            value: ton("0.01"),
-            mode: 1,
-            body: beginCell()
-                .storeUint(self.OP_SPLIT_EVENT, 32)
-                .storeInt(self.identity.token_id, 64)
-                .storeInt(msg.amount1, 64)
-                .storeInt(msg.amount2, 64)
-                .storeInt(self.state.generation + 1, 32)
-                .endCell()
-        });
+        self.last_update = now();
     }
     
     //
@@ -218,42 +199,34 @@ contract MultidimensionalToken with Deployable, Ownable {
     // Getter Functions
     //
     
-    /// Get current operational state vector
     get fun getState(): StateRoot {
         return self.state;
     }
     
-    /// Get full identity information
     get fun getIdentity(): IdentityRoot {
         return self.identity;
     }
     
-    /// Get quality metrics
     get fun getQuality(): QualityRoot {
         return self.quality;
     }
     
-    /// Get legal status
     get fun getLegal(): LegalRoot {
         return self.legal;
     }
     
-    /// Get lineage information
     get fun getLineage(): LineageRoot {
         return self.lineage;
     }
     
-    /// Check if token is stale (exceeds 30-day window)
     get fun isStale(): Bool {
         return (now() - self.last_update) >= self.STALE_THRESHOLD;
     }
     
-    /// Get time elapsed since last update (in seconds)
     get fun getTimeSinceLastUpdate(): Int {
         return now() - self.last_update;
     }
     
-    /// Get seconds remaining until token becomes stale
     get fun getTimeUntilStale(): Int {
         let elapsed: Int = now() - self.last_update;
         if (elapsed >= self.STALE_THRESHOLD) {
@@ -262,17 +235,14 @@ contract MultidimensionalToken with Deployable, Ownable {
         return self.STALE_THRESHOLD - elapsed;
     }
     
-    /// Check if token is active
     get fun isActive(): Bool {
         return self.state.is_active;
     }
     
-    /// Get current generation level
     get fun getGeneration(): Int {
         return self.state.generation;
     }
     
-    /// Get total supply
     get fun getTotalSupply(): Int {
         return self.state.total_supply;
     }
