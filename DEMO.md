@@ -42,3 +42,6 @@ Check `use-cases/coffee-tokenization/` for a real-world example of tokenizing a 
 - Read [README.md](README.md) for architecture details
 - Run tests: `npm test` (27+ passing)
 - Contribute: See [docs/ISSUE_TEMPLATE_LIGHTWEIGHT_ML.md](docs/ISSUE_TEMPLATE_LIGHTWEIGHT_ML.md)
+
+##  Validation Proof
+See [DEPLOYMENT_PROOF.md](DEPLOYMENT_PROOF.md) for ML validation results and compilation status.
