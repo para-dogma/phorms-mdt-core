@@ -1,17 +1,19 @@
-# 📊 PhormS-MDT Project Status
+# 📊 PhormS-MDT Project Status (Auto-Generated)
 
-## Current Stage: Testnet Deployment Preparation
-- [x] Core contract compiled (Tact v1.4)
-- [x] README.md written & committed
-- [x] Bytecode exported to contract_code.txt
-- [ ] Contract deployed to Testnet
-- [ ] First token minted via Python generator
-- [ ] Hard Split logic verified on-chain
+> ⚠️ Do not edit manually. Run `./scripts/update_status.sh` to update.
 
-## Last Completed Action
-Deploy script created and verified. Bytecode ready in `contract_code.txt`. Waiting for testnet TON from faucet.
+## Current Stage: Ready for Deployment
 
-## Next Immediate Steps
-1. Deploy contract using Tonkeeper
-2. Verify contract address on Tonviewer
-3. Test Hard Split logic
+### Core Components
+- [x] Tact Contract Compiled (v1.4)
+- [x] Python MDT Generator Operational
+- [ ] Unit Tests Passing
+- [x] Bytecode Exported for Deployment
+- [ ] Contract Deployed to Testnet
+
+### Last Health Check
+- Timestamp: 2026-06-15 08:57:25 UTC
+- System Status: 🟢 HEALTHY
+
+### Next Automated Actions
+- Deploy contract using Tonkeeper

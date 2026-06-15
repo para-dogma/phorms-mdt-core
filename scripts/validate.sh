@@ -7,7 +7,7 @@ echo -n "1. Checking Tact compilation... "
 if [ -f "build/MultidimensionalToken_MultidimensionalToken.code.boc" ]; then
     echo "✅ OK"
 else
-    echo " FAILED (Run: npx tact --config tact.config.json)"
+    echo "❌ FAILED"
     exit 1
 fi
 
@@ -16,7 +16,7 @@ echo -n "2. Checking Python generator... "
 if python3 -c "from scripts.phorms_generator import MDTConfig" 2>/dev/null; then
     echo "✅ OK"
 else
-    echo "❌ FAILED (Check pydantic/sklearn installation)"
+    echo "❌ FAILED"
     exit 1
 fi
 
@@ -25,17 +25,20 @@ echo -n "3. Running unit tests... "
 if npm test -- --passWithNoTests 2>/dev/null | grep -q "passed"; then
     echo "✅ OK"
 else
-    echo "⚠️  WARNING (Some tests failed or missing)"
+    echo "️  WARNING"
 fi
 
 # 4. Проверка документации
-echo -n "4. Checking README... "
-if [ -f "README.md" ] && [ -f "PROJECT_STATUS.md" ]; then
+echo -n "4. Checking documentation... "
+if [ -f "README.md" ]; then
     echo "✅ OK"
 else
-    echo "❌ FAILED (Missing documentation)"
+    echo "❌ FAILED"
     exit 1
 fi
 
 echo "====================================="
-echo "🚀 System is READY for deployment!"
+echo "🚀 System is READY!"
+echo ""
+echo "🔄 Auto-updating project status..."
+./scripts/update_status.sh
