@@ -1,1 +1,8 @@
 node_modules
+*.png
+*.jpg
+*.jpeg
+generated_*.tact
+contract_code.txt
+build/
+temp/
