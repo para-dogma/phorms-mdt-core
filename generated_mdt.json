@@ -1,0 +1,46 @@
+{
+  "token_id": "7bf63be4-b1f3-4549-9e92-8b251442ae08",
+  "vectors": [
+    {
+      "name": "Identity",
+      "value": "51ac0c02c989bef9a1f4e8f5071b0b9fc18600f06c4a45bb27188ba51758c8a6",
+      "metadata": {
+        "source": "ml_validated_generator",
+        "raw_hash": "Identity_15b15847"
+      }
+    },
+    {
+      "name": "State",
+      "value": "b87a705f7ac120b83908eb14df3310d5cade21b13e6add151877264a2adfe94a",
+      "metadata": {
+        "source": "ml_validated_generator",
+        "raw_hash": "State_34e7a5d6"
+      }
+    },
+    {
+      "name": "Quality",
+      "value": "ed34741af9d39f25278eba2a3945ecc9613474f6ff7ad297a293c9324cb67ac5",
+      "metadata": {
+        "source": "ml_validated_generator",
+        "raw_hash": "Quality_b6632c7e"
+      }
+    },
+    {
+      "name": "Legal",
+      "value": "d33dfc68525a327bd77f708375ea56088aff99eb21acd3fa93a20fe8b5c23cf5",
+      "metadata": {
+        "source": "ml_validated_generator",
+        "raw_hash": "Legal_7f9f943c"
+      }
+    },
+    {
+      "name": "Lineage",
+      "value": "f7db124181bb2e78981b9d8024d982b17040c2d85f38e309c604bc41f15b1acc",
+      "metadata": {
+        "source": "ml_validated_generator",
+        "raw_hash": "Lineage_de4eac87"
+      }
+    }
+  ],
+  "merkle_root": "c5e6876608ae32759e71d363a8d7945c699579fe4fca3c8e45803abd289c455b"
+}
